@@ -1,79 +1,105 @@
 # ☕ Proyecto: Comunicación Cliente-Servidor con Sockets en Java
 
-Este proyecto tiene como objetivo utilizar **sockets TCP** para realizar una operación simple: **sumar dos números enteros**.
+Este proyecto tiene como objetivo emplear **sockets TCP** para realizar una operación sencilla: **sumar dos números enteros**.
+
+---
 
 ## Formatos Markdown
 
-Primero una base para los Markdown.
+A continuación, se presenta una guía básica para el uso del formato **Markdown**:
 
-- Para escribir el símbolo: \`, usa la combinación: `Alt + 96`.
-- Para escribir el símbolo: \\, usa la combinación: `Alt + 92`.
-- Jerarquía de secciones: `# Título principal`, `## Subtítulo`, `### Nivel 3`
-- **Negrita**: `**texto**`
-- *Cursiva*: `*texto*`
-- Tipo de Listas:
+* Para escribir el símbolo: \`, utiliza la combinación: `Alt + 96`.
+* Para escribir el símbolo: \\, utiliza la combinación: `Alt + 92`.
+* Jerarquía de secciones:
+
+  * `#` → Título principal
+  * `##` → Subtítulo
+  * `###` → Nivel 3
+
+* **Negrita**: `**texto**`
+* *Cursiva*: `*texto*`
+* Tipos de listas:
+
   1. Con guiones: `- elemento`
-  2. Numerados: `1. elemento`
-  3. Para evitar que dos líneas seguidas se junten, has espacio: `- elemento  ` o `1. elemento  `.
-- Bloque de código:
+  2. Numeradas: `1. elemento`
+  3. Para evitar que dos líneas se unan, deja un espacio doble al final: `- elemento  ` o `1. elemento  `
+
+* Bloque de código:
 
   ```java
-  System.out.println("Hola");
+  |```
+  |System.out.println("Hola");
+  |```
   ```
 
-- Cita o nota: `> texto citado`
-- [Enlace](#formatos-markdown): `[Texto](URL)`  
-  Para abrir el enlace en otra ventana: `<a href="URL" target="_blank">Texto</a>`
-- Separador: `---`
+* Cita o nota: `> texto citado`
+* Enlace: `[Texto](URL)`
+* Separador: `---`
+
+---
 
 ## Requisitos previos
 
-Se utilizará <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code (VS Code)</a>.
+Se utilizará [Visual Studio Code (VS Code)](https://code.visualstudio.com) con las siguientes extensiones:
 
-Con las siguientes extensiones:
-
-- **Extension Pack for Java**  
-Permite compilar, ejecutar y depurar proyectos Java.
-- **Debugger for Java**  
+* **Extension Pack for Java**  
+  Permite compilar, ejecutar y depurar proyectos Java.
+* **Debugger for Java**  
   Agrega soporte de depuración paso a paso.
-- **Language Support for Java by Red Hat**  
+* **Language Support for Java by Red Hat**  
   Ofrece resaltado de sintaxis, autocompletado y análisis del código Java.
 
-También se utilizara el JDK de la versión más reciente de <a href="https://www.oracle.com/java/technologies/downloads" target="_blank">Java</a>.
+Además, se requiere tener instalado el JDK en su versión más reciente, disponible en: [Java Downloads](https://www.oracle.com/java/technologies/downloads).
 
-Para verificar si se descargo correctamente, abrir la PowerShell haciendo: `Shift + click derecho` en cualquier carpeta.
-
-Ahora se escribe:
+Para verificar la instalación, abre PowerShell haciendo `Shift + clic derecho` sobre cualquier carpeta y escribe:
 
 ```
 java -version
 javac -version
 ```
 
-Si esto no se visualiza en VS Code, realizar lo siguiente:
+Si las versiones no aparecen correctamente en VS Code, realiza los siguientes pasos:
 
-1. En la ruta donde descargaste el JDK, buscar la carpeta bin.
-2. Ir a **Inicio**, y buscar **Variables de Entorno**.
-3. Al buscar te saldrá una busqueda relacionada: **Editar las variables de entorno del sistema.**
-4. Click en **Variables de Entorno...**
-5. Seleccionar **PATH** -> editar -> nuevo...
-6. Pegar la ruta de la carpeta bin.
-7. Y guardar con **Aceptar**.
+1. Dirígete a la carpeta donde descargaste el JDK y localiza la carpeta **bin**.
+2. Abre **Inicio** y busca **Variables de entorno**.
+3. Selecciona **Editar las variables de entorno del sistema**.
+4. Haz clic en **Variables de entorno...**
+5. Selecciona **PATH** → **Editar** → **Nuevo**.
+6. Pega la ruta completa de la carpeta **bin**.
+7. Guarda los cambios con **Aceptar**.
+
+---
 
 ## Archivos principales
 
-- `SockServer.java` → Abre un socket, espera la conexión, recibe dos números, los suma y responde.  
-- `SockClient.java` → Se conecta al servidor, envía los números y muestra el resultado.
+* `SockServer.java` → Abre un socket, espera la conexión, recibe dos números, los suma y devuelve el resultado.
+* `SockClient.java` → Se conecta al servidor, envía los números y muestra la respuesta recibida.
 
 > La ejecución se realiza en dos terminales diferentes.  
-> Para abrir la Powershell en VS Code se usa la combinación: `Shift + Ctrl + Ñ`.
+> Para abrir PowerShell en VS Code, usa la combinación: `Ctrl + Shift + Ñ`.
+
+---
 
 ## Ejecución
 
-Para ejecutar los programas realiza lo siguiente:
+Para ejecutar los programas, sigue los pasos:
 
-- Para compilar: `javac Nombre.java`.
-- Para ejecutar: `java Nombre`.
+* Compilar:
 
-> Si actualizas el código y recompilas, asegurate de eliminar el archivo `.class` (el que se genera al compilar), cierra VS Code, vuelve a abrirlo y recompila el archivo.  
-> También puedes eliminar todos los archivos .class por el Powershell: `del *.class`
+  ```
+  javac Nombre.java
+  ```
+* Ejecutar:
+
+  ```
+  java Nombre
+  ```
+
+> Si modificas el código y recompilas, asegúrate de eliminar los archivos `.class` (generado durante la compilación).  
+> Puedes eliminar todos los archivos `.class` desde PowerShell con el comando:
+>
+> ```
+> del *.class
+> ```
+
+---
